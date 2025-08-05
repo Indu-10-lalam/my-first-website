@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quote Galaxy 🌟</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌈 Daily Dose of Wisdom 🌈</h1>
+    <div class="quote-box">
+      <p class="quote">"The only limit to our realization of tomorrow is our doubts of today."</p>
+      <p class="author">- Franklin D. Roosevelt</p>
+    </div>
+    <button onclick="newQuote()">New Quote 🔄</button>
+  </div>
+
+  <script>
+    const quotes = [
+      { quote: "Be yourself; everyone else is already taken.", author: "Oscar Wilde" },
+      { quote: "In the middle of difficulty lies opportunity.", author: "Albert Einstein" },
+      { quote: "You miss 100% of the shots you don’t take.", author: "Wayne Gretzky" },
+      { quote: "Dream big and dare to fail.", author: "Norman Vaughan" },
+      { quote: "Stay hungry, stay foolish.", author: "Steve Jobs" }
+    ];
+
+    function newQuote() {
+      const random = Math.floor(Math.random() * quotes.length);
+      document.querySelector('.quote').textContent = `"${quotes[random].quote}"`;
+      document.querySelector('.author').textContent = `- ${quotes[random].author}`;
+    }
+  </script>
+</body>
+</html>
